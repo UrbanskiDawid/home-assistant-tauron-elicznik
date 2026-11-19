@@ -11,8 +11,7 @@ A minimal custom integration that imports **hourly grid consumption** from
 [Tauron eLicznik](https://elicznik.tauron-dystrybucja.pl/) into Home Assistant, so you can
 use it in the **Energy dashboard**.
 
-It does one thing: logs in to eLicznik, downloads the hourly consumption CSV and stores it as a
-long-term statistic. There are no sensors, no solar/export, no tariff zones.
+Consumption only – no sensors, solar/export or tariff zones.
 
 ![Energy dashboard with Tauron hourly consumption](docs/energy_dashboard.jpg)
 
