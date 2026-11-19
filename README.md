@@ -7,6 +7,8 @@ use it in the **Energy dashboard**.
 It does one thing: logs in to eLicznik, downloads the hourly consumption CSV and stores it as a
 long-term statistic. There are no sensors, no solar/export, no tariff zones.
 
+![Energy dashboard with Tauron hourly consumption](docs/energy_dashboard.jpg)
+
 ## How fresh is the data?
 
 Tauron has no live data. Hourly values show up on eLicznik in batches, roughly **~8 hours late**
@@ -46,13 +48,41 @@ Then restart Home Assistant.
 ## Set up
 
 1. Settings → Devices & services → Add integration → **Tauron Energy**.
+
+   ![Tauron Energy integration](docs/integration.jpg)
+
 2. Enter your eLicznik e-mail and password. Leave *Metering point ID* empty unless your account
    has several metering points.
+
+   ![Configuration form](docs/config_flow.jpg)
+
 3. The first import loads the last 30 days (takes a few seconds).
 4. Settings → Dashboards → Energy → *Electricity grid* → *Add consumption* → pick
    **`<your account> consumption`** (statistic `tauron_energy:<account>_consumption`).
 
+   ![Energy configuration](docs/energy_config.jpg)
+
 You can check the imported data under Developer tools → Statistics.
+
+### Optional: dashboard card
+
+To show hourly usage on any dashboard, add a *Statistics graph* card:
+
+```yaml
+type: statistics-graph
+title: Zużycie prądu (Tauron)
+entities:
+  - tauron_energy:<account>_consumption
+stat_types:
+  - change
+chart_type: bar
+period: hour
+days_to_show: 3
+```
+
+![Dashboard card](docs/dashboard_card.png)
+
+The integration icon (`brand/icon.png`) is shown by Home Assistant 2026.3 or newer.
 
 ## Troubleshooting
 
