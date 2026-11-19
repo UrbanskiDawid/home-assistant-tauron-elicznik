@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tauron eLicznik",
+        "description": "Log in with your elicznik.tauron-dystrybucja.pl account.",
+        "data": {
+          "username": "Username (e-mail)",
+          "password": "Password",
+          "meter_id": "Metering point ID (optional)"
+        },
+        "data_description": {
+          "meter_id": "Only needed if your account has more than one metering point. Leave empty to use the default one."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid username or password.",
+      "cannot_connect": "Could not log in to Tauron eLicznik. Try again later."
+    },
+    "abort": {
+      "already_configured": "This account and metering point are already configured."
+    }
+  }
+}
