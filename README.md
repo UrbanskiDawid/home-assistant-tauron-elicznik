@@ -9,13 +9,6 @@ long-term statistic. There are no sensors, no solar/export, no tariff zones.
 
 ![Energy dashboard with Tauron hourly consumption](docs/energy_dashboard.jpg)
 
-## How fresh is the data?
-
-Tauron has no live data. Hourly values show up on eLicznik in batches, roughly **~8 hours late**
-(on 2026-11-19 at 14:00 the data covered up to 06:00 the same day), sometimes a day or more.
-The integration checks every hour and re-imports the last 3 days each time, so late and
-corrected hours fill in automatically.
-
 ## Installation
 
 ### Using [HACS](https://hacs.xyz/) (recommended)
