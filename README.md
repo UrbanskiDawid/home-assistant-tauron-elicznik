@@ -14,12 +14,34 @@ Tauron has no live data. Hourly values show up on eLicznik in batches, roughly *
 The integration checks every hour and re-imports the last 3 days each time, so late and
 corrected hours fill in automatically.
 
-## Install
+## Installation
 
-**HACS:** HACS → ⋮ → Custom repositories → add `https://github.com/UrbanskiDawid/tauron-elicznik` as type *Integration* →
-install *Tauron Energy* → restart Home Assistant.
+### Using [HACS](https://hacs.xyz/) (recommended)
 
-**Manual:** copy `custom_components/tauron_energy` to `/config/custom_components/` and restart.
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=UrbanskiDawid&repository=tauron-elicznik&category=integration)
+
+Click the button above, or add it by hand:
+
+* In HACS open the ⋮ menu → _Custom repositories_
+* Add `https://github.com/UrbanskiDawid/tauron-elicznik` with type _Integration_
+* Search for "Tauron Energy" and click _Download_
+* Restart Home Assistant
+
+HACS not installed yet? Follow the [HACS download guide](https://hacs.xyz/docs/use/download/download/) first.
+
+### Manual
+
+Copy the `custom_components/tauron_energy` directory into your Home Assistant `config/custom_components/` directory:
+```bash
+cd /config
+wget https://github.com/UrbanskiDawid/tauron-elicznik/archive/refs/heads/main.zip
+unzip main.zip
+mkdir -p custom_components
+cp -r tauron-elicznik-main/custom_components/tauron_energy custom_components/
+rm -rf main.zip tauron-elicznik-main
+```
+
+Then restart Home Assistant.
 
 ## Set up
 
