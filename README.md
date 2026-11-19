@@ -5,7 +5,7 @@
 [![Validate HACS](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hacs.yaml/badge.svg)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hacs.yaml)
 [![Validate with hassfest](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hassfest.yaml)
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
-[![License: MIT](https://img.shields.io/github/license/UrbanskiDawid/home-assistant-tauron-elicznik)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A minimal custom integration that imports **hourly grid consumption** from
 [Tauron eLicznik](https://elicznik.tauron-dystrybucja.pl/) into Home Assistant, so you can
