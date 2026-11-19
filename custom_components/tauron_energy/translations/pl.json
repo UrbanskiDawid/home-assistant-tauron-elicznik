@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tauron eLicznik",
+        "description": "Zaloguj się kontem z elicznik.tauron-dystrybucja.pl.",
+        "data": {
+          "username": "Login (e-mail)",
+          "password": "Hasło",
+          "meter_id": "Identyfikator punktu poboru (opcjonalnie)"
+        },
+        "data_description": {
+          "meter_id": "Potrzebny tylko, jeśli Twoje konto ma więcej niż jeden punkt poboru. Zostaw puste, aby użyć domyślnego."
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Nieprawidłowy login lub hasło.",
+      "cannot_connect": "Nie udało się zalogować do Tauron eLicznik. Spróbuj ponownie później."
+    },
+    "abort": {
+      "already_configured": "To konto i punkt poboru są już skonfigurowane."
+    }
+  }
+}
