@@ -83,17 +83,6 @@ days_to_show: 3
 
 The integration icon (`brand/icon.png`) is shown by Home Assistant 2026.3 or newer.
 
-## Troubleshooting
-
-```yaml
-logger:
-  logs:
-    custom_components.tauron_energy: debug
-```
-
-- *Invalid username or password*: check you can log in at elicznik.tauron-dystrybucja.pl.
-- *Too many login attempts*: Tauron temporarily blocks logins; the integration retries hourly.
-
 ## Related projects
 
 **Tauron eLicznik in Home Assistant**
@@ -110,23 +99,6 @@ logger:
 **Libraries and APIs**
 - [mlesniew/elicznik](https://github.com/mlesniew/elicznik) – Python module and CLI for eLicznik readings.
 - [DamianSowinski/tauron-api](https://github.com/DamianSowinski/tauron-api) – PHP JSON API over eLicznik (2021, uses the old login flow).
-
-## Development
-
-```
-python3 -m venv .venv && .venv/bin/pip install pytest-homeassistant-custom-component
-.venv/bin/python -m pytest
-```
-
-### Releasing
-
-Push a version tag; GitHub Actions sets the manifest version, zips `custom_components/tauron_energy`
-and publishes a release with `tauron_energy.zip` (used by HACS and the manual install):
-
-```
-git tag v0.2.0
-git push origin v0.2.0
-```
 
 ## License
 
