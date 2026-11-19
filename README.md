@@ -88,6 +88,23 @@ logger:
 - *Invalid username or password*: check you can log in at elicznik.tauron-dystrybucja.pl.
 - *Too many login attempts*: Tauron temporarily blocks logins; the integration retries hourly.
 
+## Related projects
+
+**Tauron eLicznik in Home Assistant**
+- [PiotrMachowski/Home-Assistant-custom-components-Tauron-AMIplus](https://github.com/PiotrMachowski/Home-Assistant-custom-components-Tauron-AMIplus) – full-featured eLicznik integration (sensors, generation, tariffs, statistics). Use it if you need more than consumption.
+- [staszekj/eltrue-tauron-elicznik-ha](https://github.com/staszekj/eltrue-tauron-elicznik-ha) – another eLicznik meter readings integration.
+
+**Other Tauron integrations for Home Assistant**
+- [direk/tauronizer](https://github.com/direk/tauronizer) – Tauron tariff comparison.
+- [kubukoz/ha-tauron-g13](https://github.com/kubukoz/ha-tauron-g13) – current G13 tariff zone.
+- [elmystico/ha-pl-energy-tariff](https://github.com/elmystico/ha-pl-energy-tariff) – hourly gross electricity prices for Polish G tariffs.
+- [twiktorowicz/Pstryk-OSD-Compare](https://github.com/twiktorowicz/Pstryk-OSD-Compare) – compare Pstryk meter data with distribution operator statistics.
+- [l4red0/tauron_awarie](https://github.com/l4red0/tauron_awarie), [Eales/tauron-dystrybucja](https://github.com/Eales/tauron-dystrybucja) – planned and unplanned power outages.
+
+**Libraries and APIs**
+- [mlesniew/elicznik](https://github.com/mlesniew/elicznik) – Python module and CLI for eLicznik readings.
+- [DamianSowinski/tauron-api](https://github.com/DamianSowinski/tauron-api) – PHP JSON API over eLicznik (2021, uses the old login flow).
+
 ## Development
 
 ```
