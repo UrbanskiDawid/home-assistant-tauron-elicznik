@@ -16,11 +16,7 @@ long-term statistic. There are no sensors, no solar/export, no tariff zones.
 
 ![Energy dashboard with Tauron hourly consumption](docs/energy_dashboard.jpg)
 
-**[Installation](#installation)** ([INSTALL.md](INSTALL.md)) · **[Set up](#set-up)** · **[Related projects](#related-projects)** · **[License](LICENSE)**
-
 ## Installation
-
-> 📄 Also available as a separate page: [INSTALL.md](INSTALL.md)
 
 ### Using [HACS](https://hacs.xyz/) (recommended)
 
