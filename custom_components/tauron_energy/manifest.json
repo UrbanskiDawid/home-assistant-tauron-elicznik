@@ -1,12 +1,16 @@
 {
   "domain": "tauron_energy",
   "name": "Tauron Energy",
-  "codeowners": ["@UrbanskiDawid"],
+  "codeowners": [
+    "@UrbanskiDawid"
+  ],
   "config_flow": true,
-  "dependencies": ["recorder"],
+  "dependencies": [
+    "recorder"
+  ],
   "documentation": "https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik",
-  "issue_tracker": "https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/issues",
   "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/issues",
   "requirements": [],
   "version": "0.1.0"
 }
