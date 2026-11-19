@@ -13,12 +13,12 @@ long-term statistic. There are no sensors, no solar/export, no tariff zones.
 
 ### Using [HACS](https://hacs.xyz/) (recommended)
 
-[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=UrbanskiDawid&repository=tauron-elicznik&category=integration)
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=UrbanskiDawid&repository=home-assistant-tauron-elicznik&category=integration)
 
 Click the button above, or add it by hand:
 
 * In HACS open the ⋮ menu → _Custom repositories_
-* Add `https://github.com/UrbanskiDawid/tauron-elicznik` with type _Integration_
+* Add `https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik` with type _Integration_
 * Search for "Tauron Energy" and click _Download_
 * Restart Home Assistant
 
@@ -29,11 +29,11 @@ HACS not installed yet? Follow the [HACS download guide](https://hacs.xyz/docs/u
 Copy the `custom_components/tauron_energy` directory into your Home Assistant `config/custom_components/` directory:
 ```bash
 cd /config
-wget https://github.com/UrbanskiDawid/tauron-elicznik/archive/refs/heads/main.zip
+wget https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/archive/refs/heads/main.zip
 unzip main.zip
 mkdir -p custom_components
-cp -r tauron-elicznik-main/custom_components/tauron_energy custom_components/
-rm -rf main.zip tauron-elicznik-main
+cp -r home-assistant-tauron-elicznik-main/custom_components/tauron_energy custom_components/
+rm -rf main.zip home-assistant-tauron-elicznik-main
 ```
 
 Then restart Home Assistant.
