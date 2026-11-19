@@ -1,0 +1,17 @@
+name: Validate HACS
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: hacs/action@main
+        with:
+          category: integration
+          # Icon ships in custom_components/tauron_energy/brand (HA 2026.3+),
+          # not in the home-assistant/brands repository.
+          ignore: brands

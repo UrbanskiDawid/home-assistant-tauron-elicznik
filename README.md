@@ -1,5 +1,12 @@
 # Tauron Energy for Home Assistant
 
+[![GitHub Latest Release](https://img.shields.io/github/v/release/UrbanskiDawid/home-assistant-tauron-elicznik)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/releases)
+[![Test](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/test.yaml/badge.svg)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/test.yaml)
+[![Validate HACS](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hacs.yaml/badge.svg)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hacs.yaml)
+[![Validate with hassfest](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/actions/workflows/hassfest.yaml)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
+[![License: MIT](https://img.shields.io/github/license/UrbanskiDawid/home-assistant-tauron-elicznik)](LICENSE)
+
 A minimal custom integration that imports **hourly grid consumption** from
 [Tauron eLicznik](https://elicznik.tauron-dystrybucja.pl/) into Home Assistant, so you can
 use it in the **Energy dashboard**.
@@ -26,14 +33,13 @@ HACS not installed yet? Follow the [HACS download guide](https://hacs.xyz/docs/u
 
 ### Manual
 
-Copy the `custom_components/tauron_energy` directory into your Home Assistant `config/custom_components/` directory:
+Download [*tauron_energy.zip*](https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/releases/latest/download/tauron_energy.zip) and extract it to `config/custom_components/tauron_energy`:
 ```bash
-cd /config
-wget https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/archive/refs/heads/main.zip
-unzip main.zip
-mkdir -p custom_components
-cp -r home-assistant-tauron-elicznik-main/custom_components/tauron_energy custom_components/
-rm -rf main.zip home-assistant-tauron-elicznik-main
+mkdir -p /config/custom_components/tauron_energy
+cd /config/custom_components/tauron_energy
+wget https://github.com/UrbanskiDawid/home-assistant-tauron-elicznik/releases/latest/download/tauron_energy.zip
+unzip tauron_energy.zip
+rm tauron_energy.zip
 ```
 
 Then restart Home Assistant.
@@ -111,5 +117,19 @@ logger:
 python3 -m venv .venv && .venv/bin/pip install pytest-homeassistant-custom-component
 .venv/bin/python -m pytest
 ```
+
+### Releasing
+
+Push a version tag; GitHub Actions sets the manifest version, zips `custom_components/tauron_energy`
+and publishes a release with `tauron_energy.zip` (used by HACS and the manual install):
+
+```
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+## License
+
+[MIT](LICENSE)
 
 Unofficial; not affiliated with TAURON. Uses the same endpoints as the eLicznik website.

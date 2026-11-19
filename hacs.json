@@ -1,1 +1,6 @@
-{"name": "Tauron Energy", "render_readme": true}
+{
+  "name": "Tauron Energy",
+  "render_readme": true,
+  "zip_release": true,
+  "filename": "tauron_energy.zip"
+}
